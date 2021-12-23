@@ -8,5 +8,7 @@ cd $HOME/repos/aur/zramd
 makepkg -si
 cd $HOME
 doas systemctl enable --now zramd
-mkdir dotfiles
-git --git-dir=$HOME/dotfiles/ --work-tree=$HOME clone https://github.com/akirarice/dotfiles.git
+git init --bare $HOME/dotfiles
+alias config='/usr/bin/gt --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+config remote add origin https://github.com/akirarice/dotfiles.git
+config pull -ff origin master
