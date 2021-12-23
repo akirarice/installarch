@@ -15,13 +15,18 @@ pacman -S grub grub-btrfs efibootmgr networkmanager os-prober linux-headers pipe
 
 #pacman -S --noconfirm xf86-video-amdgpu
 
+#efi
 #grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
+
+#mbr
+#grub-install
 #grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable NetworkManager
 systemctl enable gdm
 
 pacman -Rns --noconfirm sudo
-#set multilib repo
-doas sed -i '/\[multilib\]/s/^#//;/^\[multilib]/{n;s/^#//}' /etc/pacman.conf
-pacman -Syy
-pacman -S steam lutris
+
+#set multilib repo & install steam
+#sed -i '/\[multilib\]/s/^#//;/^\[multilib]/{n;s/^#//}' /etc/pacman.conf
+#pacman -Syy
+#pacman -S steam lutris
