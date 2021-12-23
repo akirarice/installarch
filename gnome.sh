@@ -1,4 +1,7 @@
 #!/bin/bash
+# Step 1: Set grub option and insert drive name
+# Step 2: If needed, uncomment bottom lines for multlib/steam
+
 ln -sf /usr/share/zoneinfo/Europe/Amsterdam /etc/localtime
 hwclock --systohc
 sed -i '177s/.//' /etc/locale.gen
