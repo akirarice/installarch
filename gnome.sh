@@ -9,6 +9,7 @@ echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1	localhost" >> /etc/hosts
 echo "127.0.1.1	arch.localdomain arch" >> /etc/hosts
 echo "permit nopass akira" >> /etc/doas.conf
+passwd
 useradd -m akira
 passwd akira
 pacman -S grub grub-btrfs efibootmgr networkmanager os-prober linux-headers pipewire pipewire-alsa pipewire-pulse pipewire-jack gnome gnome-tweaks materia-gtk-theme rofi ttf-liberation pass pass-otp zsh zsh-syntax-highlighting firefox firefox-ublock-origin openssh rsync neofetch htop opendoas
