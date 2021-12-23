@@ -21,3 +21,7 @@ systemctl enable NetworkManager
 systemctl enable gdm
 
 pacman -Rns --noconfirm sudo
+#set multilib repo
+doas sed -i '/\[multilib\]/s/^#//;/^\[multilib]/{n;s/^#//}' /etc/pacman.conf
+pacman -Syy
+pacman -S steam lutris
