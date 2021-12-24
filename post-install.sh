@@ -1,6 +1,5 @@
 #!/bin/sh
 #Setup swap
-doas echo [zram0] >> /etc/systemd/zram-generator.conf
 doas systemctl daemon-reload
 doas systemctl start /dev/zram0
 #set theme

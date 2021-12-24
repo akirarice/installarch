@@ -26,6 +26,8 @@ pacman -S wmctrl sxhkd zram-generator grub grub-btrfs efibootmgr networkmanager 
 #mbr
 #grub-install
 #grub-mkconfig -o /boot/grub/grub.cfg
+
+echo "[zram0]" >> /etc/systemd/zram-generator.conf
 systemctl enable NetworkManager
 systemctl enable gdm
 chsh -s /usr/bin/zsh akira
