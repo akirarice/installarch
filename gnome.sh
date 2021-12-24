@@ -16,7 +16,7 @@ passwd
 useradd -m akira
 usermod -aG wheel akira
 passwd akira
-pacman -S zram-generator grub grub-btrfs efibootmgr networkmanager os-prober linux-headers pipewire pipewire-alsa pipewire-pulse pipewire-jack gnome gnome-tweaks materia-gtk-theme rofi ttf-liberation pass pass-otp zsh zsh-syntax-highlighting firefox firefox-ublock-origin openssh rsync neofetch htop opendoas
+pacman -S wmctrl sxhkd zram-generator grub grub-btrfs efibootmgr networkmanager os-prober linux-headers pipewire pipewire-alsa pipewire-pulse pipewire-jack gnome gnome-tweaks materia-gtk-theme rofi ttf-liberation pass pass-otp zsh zsh-syntax-highlighting firefox firefox-ublock-origin openssh rsync neofetch htop opendoas
 
 #pacman -S --noconfirm xf86-video-amdgpu
 
@@ -28,6 +28,7 @@ pacman -S zram-generator grub grub-btrfs efibootmgr networkmanager os-prober lin
 #grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable NetworkManager
 systemctl enable gdm
+chsh -s /usr/bin/zsh akira
 EDITOR=nvim visudo
 #set multilib repo & install steam
 #sed -i '/\[multilib\]/s/^#//;/^\[multilib]/{n;s/^#//}' /etc/pacman.conf
