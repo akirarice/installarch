@@ -8,7 +8,7 @@
 `cd /`  
 `umount /mnt`  
 `mount -o noatime,compress=zstd,space_cache=v2,discard=async,subvolume=@ /dev/sdX# /mnt`  
-`mdkir -p /mnt/{home,root,var}`  
+`mdkir -p /mnt/{home,boot,var}`  
 `mount -o noatime,compress=zstd,space_cache=v2,discard=async,subvolume=@home /dev/sdX# /mnt/home`  
 `mount -o noatime,compress=zstd,space_cache=v2,discard=async,subvolume=@var /dev/sdX# /mnt/var`  
 `mount /dev/sdX# /mnt/boot`  
