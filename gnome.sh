@@ -16,7 +16,7 @@ passwd
 useradd -m akira
 usermod -aG wheel akira
 passwd akira
-pacman -S wmctrl sxhkd zram-generator grub grub-btrfs efibootmgr networkmanager os-prober linux-headers pipewire pipewire-alsa pipewire-pulse pipewire-jack gnome gnome-tweaks materia-gtk-theme rofi ttf-liberation pass pass-otp zsh zsh-syntax-highlighting firefox firefox-ublock-origin openssh rsync neofetch htop opendoas
+pacman -S xdotool wmctrl sxhkd zram-generator grub grub-btrfs efibootmgr networkmanager os-prober linux-headers pipewire pipewire-alsa pipewire-pulse pipewire-jack gnome gnome-tweaks materia-gtk-theme rofi ttf-liberation pass pass-otp zsh zsh-syntax-highlighting firefox firefox-ublock-origin openssh rsync neofetch htop opendoas
 
 #pacman -S --noconfirm xf86-video-amdgpu
 
