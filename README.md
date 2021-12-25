@@ -11,8 +11,13 @@
 `mdkir -p /mnt/{home,boot,var}`  
 `mount -o noatime,compress=zstd,space_cache=v2,discard=async,subvol=@home /dev/sdX# /mnt/home`  
 `mount -o noatime,compress=zstd,space_cache=v2,discard=async,subvol=@var /dev/sdX# /mnt/var`  
-`mount /dev/sdX# /mnt/boot` (Should be different mount point from root volume)   
+`mount /dev/sdX# /mnt/boot` for mbr   
+`mount /dev/sdX# /mnt/boot/efi` for uefi   
 `pacstrap /mnt base base-devel linux linux-firmware linux-headers neovim git`  
 `genfstab -U /mnt >> /mnt/etc/fstab`  
 `arch-chroot /mnt`
 ## Now clone this repo and configure the gnome script  
+Options for /etc/default/grub :  
+GRUB_DISABLE_SUBMENU=y  
+GRUB_DEFAULT=saved  
+GRUB_SAVEDEFAULT=true  

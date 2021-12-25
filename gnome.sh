@@ -25,6 +25,8 @@ pacman -S xdotool wmctrl sxhkd zram-generator grub grub-btrfs efibootmgr network
 
 #mbr
 #grub-install
+
+generate grub config
 #grub-mkconfig -o /boot/grub/grub.cfg
 
 echo "[zram0]" >> /etc/systemd/zram-generator.conf
