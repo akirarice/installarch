@@ -9,7 +9,7 @@ git clone https://github.com/akirarice/st.git $HOME/repos/github/st
 cd $HOME/repos/github/st
 doas make clean install
 git clone https://aur.archlinux.org/yay-bin.git $HOME/repos/aur/yay-bin
-cd $HOME/repos/aur/yay
+cd $HOME/repos/aur/yay-bin
 makepkg -si
 cd $HOME
 yay -S libxft-bgra timeshift timeshift-autosnap
