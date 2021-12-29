@@ -8,6 +8,12 @@ gsettings set org.gnome.desktop.interface gtk-theme "Materia-dark"
 git clone https://github.com/akirarice/st.git $HOME/repos/github/st
 cd $HOME/repos/github/st
 doas make clean install
+git clone https://github.com/akirarice/dwm.git $HOME/repos/github/dwm
+cd $HOME/repos/github/dwm
+doas make clean install
+git clone https://github.com/akirarice/dmenu.git $HOME/repos/github/dmenu
+cd $HOME/repos/github/dmenu
+doas make clean install
 git clone https://aur.archlinux.org/yay-bin.git $HOME/repos/aur/yay-bin
 cd $HOME/repos/aur/yay-bin
 makepkg -si
